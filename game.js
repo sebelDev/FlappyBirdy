@@ -1,3 +1,7 @@
+import { cool } from "./amazing.js"
+
+console.log(cool)
+
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
@@ -148,7 +152,7 @@ function drawPlayer(deltaTime) {
         ctx.fillStyle = player.color;
         ctx.fillRect(player.x - (player.size / 2), player.y - (player.size / 2), player.size, player.size);
 
-        console.log(player.y)
+        
         if (player.y + (player.size / 2) >= 370) {
             die()
         }
@@ -173,7 +177,7 @@ function gameLoop(time) {
 
     var deltaTime = (time - lastTime) / 1000
 
-    console.log(player.velocity)
+    //console.log(player.velocity)
 
     clearCanvas();
     drawPlayer(deltaTime);
